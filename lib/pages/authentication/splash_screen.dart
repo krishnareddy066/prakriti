@@ -1,9 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:prakriti/home_screen.dart';
-import 'locator.dart';
-import 'package:prakriti/main_screen.dart';
-import 'productlist.dart';
+import 'package:prakriti/pages/bottom_nav/home_page/home_screen.dart';
+import '../bottom_nav/store_locations/locator.dart';
+import 'package:prakriti/pages/main_screen.dart';
+import '../bottom_nav/product_shopping/productlist.dart';
 
 
 import 'LoginScreen.dart'; // Import LoginScreen

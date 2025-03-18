@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'plant_detail_page.dart';
-import 'chatbot_home.dart';
+import '../home_page/tour/plant_detail_page.dart';
+import '../chat_bot/chatbot_home.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
 class SearchPage extends StatefulWidget {

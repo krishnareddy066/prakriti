@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 
 // Import your screens
-import 'home_screen.dart';
-import 'ChatScreen.dart';
-import 'search_screen.dart';
-import 'chatbot_home.dart';
-import 'productlist.dart';
-import 'locator.dart';
-import 'tour_screen.dart';
-import 'ProfileScreen.dart';
+import 'bottom_nav/data_input_page/input.dart';
+import 'bottom_nav/home_page/home_screen.dart';
+import 'bottom_nav/search_page/search_screen.dart';
+import 'bottom_nav/chat_bot/chatbot_home.dart';
+import 'bottom_nav/product_shopping/productlist.dart';
+import 'bottom_nav/store_locations/locator.dart';
+import 'bottom_nav/home_page/tour/tour_screen.dart';
+import 'bottom_nav/profile/ProfileScreen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -29,7 +29,7 @@ class _MainScreenState extends State<MainScreen> {
 
   final List<Widget> _pages = [
     HomePage(),
-    ChatScreen(),
+    Input(),
     SearchPage(),
     ChatBotScreen(),
     AmazonProductsPage(),
@@ -149,7 +149,7 @@ class _MainScreenState extends State<MainScreen> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.people_alt),
-            label: 'Community',
+            label: 'Input',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search),

@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:prakriti/SignupScreen.dart';
+import 'package:prakriti/pages/authentication/SignupScreen.dart';
 import 'favourites.dart';
 import 'privacy.dart';
-import 'help_support.dart';
+import '../../authentication/help_support.dart';
 import 'favourites.dart';
-import 'settings.dart';
-import 'home_screen.dart';
+import '../../authentication/settings.dart';
+import '../home_page/home_screen.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
 final userId = FirebaseAuth.instance.currentUser?.uid;

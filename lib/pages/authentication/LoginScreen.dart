@@ -1,9 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart'; // Import FirebaseAuth
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:prakriti/main_screen.dart';
+import 'package:prakriti/pages/main_screen.dart';
 import 'SignupScreen.dart';
-import 'home_screen.dart';
+import '../bottom_nav/home_page/home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   final TextEditingController usernameController = TextEditingController();

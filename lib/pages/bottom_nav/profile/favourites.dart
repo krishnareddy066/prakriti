@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
-import 'plant_detail_page.dart';
+import '../home_page/tour/plant_detail_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class FavoritesPage extends StatefulWidget {

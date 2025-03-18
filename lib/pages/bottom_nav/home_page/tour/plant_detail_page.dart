@@ -4,8 +4,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:translator/translator.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
-import 'plant_3d_view_page.dart';
-import 'chatbot_home.dart';
+import '3D_models/plant_3d_view_page.dart';
+import '../../chat_bot/chatbot_home.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class PlantDetailPage extends StatefulWidget {

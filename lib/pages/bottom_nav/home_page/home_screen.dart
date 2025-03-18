@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart'; // Import for user icon
-import 'package:prakriti/favourites.dart';
-import 'tour_screen.dart'; // Import your TourPage screen if it's in a different file
-import 'ProfileScreen.dart';
+import 'package:prakriti/pages/bottom_nav/profile/favourites.dart';
+import 'tour/tour_screen.dart'; // Import your TourPage screen if it's in a different file
+import '../profile/ProfileScreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'favourites.dart';// Import your ProfilePage screen if it's in a different file
+import '../profile/favourites.dart';// Import your ProfilePage screen if it's in a different file
 
 class HomePage extends StatefulWidget {
   @override
