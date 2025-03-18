@@ -4,6 +4,7 @@ import 'package:speech_to_text/speech_to_text.dart' as stt;
 // Import your screens
 import 'home_screen.dart';
 import 'ChatScreen.dart';
+import 'input.dart';
 import 'search_screen.dart';
 import 'chatbot_home.dart';
 import 'productlist.dart';
@@ -29,7 +30,7 @@ class _MainScreenState extends State<MainScreen> {
 
   final List<Widget> _pages = [
     HomePage(),
-    ChatScreen(),
+    InputPage(),
     SearchPage(),
     ChatBotScreen(),
     AmazonProductsPage(),
@@ -148,7 +149,7 @@ class _MainScreenState extends State<MainScreen> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.people_alt),
+            icon: Icon(Icons.medical_information),
             label: 'Community',
           ),
           BottomNavigationBarItem(

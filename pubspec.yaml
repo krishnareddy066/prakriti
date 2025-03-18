@@ -62,6 +62,7 @@ dependencies:
   google_maps_flutter: ^2.3.0
   geolocator: ^13.0.2
   font_awesome_flutter:
+  google_mlkit_text_recognition:
 
 
 
