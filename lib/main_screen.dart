@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:prakriti/reels_page.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 
 // Import your screens
@@ -32,7 +33,7 @@ class _MainScreenState extends State<MainScreen> {
     HomePage(),
     InputPage(),
     SearchPage(),
-    ChatBotScreen(),
+    ReelsPage(),
     AmazonProductsPage(),
     AyurvedicStoresPage(),
   ];
@@ -42,7 +43,7 @@ class _MainScreenState extends State<MainScreen> {
     "home": 0,
     "favourite": 1,
     "search": 2,
-    "chatbot": 3,
+    "Videos": 3,
     "shop": 4,
     "locator": 5,
   };
@@ -157,8 +158,8 @@ class _MainScreenState extends State<MainScreen> {
             label: 'Search',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.chat),
-            label: 'Chat Bot',
+            icon: Icon(Icons.play_circle_outline_rounded),
+            label: 'Videos',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_basket),
@@ -180,10 +181,6 @@ class _MainScreenState extends State<MainScreen> {
   Widget _buildMicButton() {
     return GestureDetector(
       onTap: () {
-        setState(() {
-          // Toggle the tapped state on each tap
-          _isMicTapped = !_isMicTapped;
-        });
         if (_isListening) {
           _stopListening();
         } else {
@@ -191,51 +188,24 @@ class _MainScreenState extends State<MainScreen> {
         }
       },
       child: Container(
-        width: 150, // Width of the button
-        height: 50, // Height of the button
+        width: 60, // Circular button size
+        height: 60, // Circular button size
         decoration: BoxDecoration(
-          color: _isMicTapped ? Colors.transparent : Colors.grey, // Toggle between gray and transparent
-          borderRadius: BorderRadius.circular(25), // Curved corners
-          border: Border.all(
-            color: Colors.lightBlue,  // Border color (white, change as needed)
-            width: 2,  // Border width
-          ),
+          color: _isListening ? Colors.red : Colors.blue, // Red when listening, blue otherwise
+          shape: BoxShape.circle, // Make the button circular
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.2),
+              blurRadius: 10,
+              offset: Offset(0, 4),
+            ),
+          ],
         ),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(25), // Clip the GIF to match the border's curvature
-          child: Stack(
-            children: [
-              // Background GIF, only show after button is tapped
-              if (_isMicTapped)
-                Positioned.fill(
-                  child: Image.asset(
-                    'assets/images/appbackgroundoptimize.gif',  // Replace with your GIF path
-                    fit: BoxFit.cover,  // Cover the entire button
-                  ),
-                ),
-              // Content of the button (Icon and Text)
-              Align(
-                alignment: Alignment.center,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center, // Center the row
-                  children: [
-                    Icon(
-                      Icons.mic,
-                      color: _isMicTapped ? Colors.white : Colors.black, // White icon when tapped
-                    ),
-                    const SizedBox(width: 8), // Spacing between icon and text
-                    Text(
-                      "Vocal Assistant", // Text beside the icon
-                      style: TextStyle(
-                        color: _isMicTapped ? Colors.white : Colors.black, // White text when tapped
-                        fontSize: 13,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
+        child: Center(
+          child: Icon(
+            Icons.mic,
+            color: Colors.white, // White icon
+            size: 30, // Icon size
           ),
         ),
       ),

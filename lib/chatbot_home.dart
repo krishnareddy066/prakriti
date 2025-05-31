@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'dart:typed_data';
-
+// helllo
 import 'package:dash_chat_2/dash_chat_2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
@@ -93,8 +93,8 @@ class _HomePageState extends State<ChatBotScreen> {
       // Herbal Plants
 
       "Aloe Vera",
-      "aloevera"
-          "ashwagandha",
+      "aloevera",
+      "ashwagandha",
       "tulsi (Holy Basil)",
       "neem",
       "turmeric (Haldi)",

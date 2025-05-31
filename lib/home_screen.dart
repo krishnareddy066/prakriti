@@ -62,7 +62,7 @@ class _HomePageState extends State<HomePage> {
                             style: TextStyle(color: Colors.white),
                           ),
                           TextSpan(
-                            text: "Prakriti!",
+                            text: "Prakriti",
                             style: TextStyle(color: Color(0xFFF39C12)),
                           ),
                         ],
@@ -358,9 +358,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       const SizedBox(height: 10),
                       const Text(
-                        "Ayurveda is a traditional Indian medical system that uses a holistic approach to health and wellness. "
-                            "It's based on the idea that everything in the universe is connected, and that an imbalance in one area "
-                            "can affect another. The main goal of Ayurveda is to promote balance in the mind, body, and spirit.",
+                        "Ayurveda, a holistic Indian medical system, aligns with sustainable living by promoting natural remedies, herbal cultivation, and eco-friendly practices. Prakriti integrates AI and AR to enhance this approach, reducing reliance on synthetic medicines and encouraging a healthier, nature-driven lifestyle.9",
                         style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.normal,

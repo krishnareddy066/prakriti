@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
 import 'package:image_picker/image_picker.dart';
 import 'health_service.dart';
+import 'report_result.dart'; // Import the new page
 
 class InputPage extends StatefulWidget {
   const InputPage({super.key});
@@ -67,10 +68,13 @@ class _HomePageState extends State<InputPage> {
       // Analyze the health report using the AI service
       final predictedIssues = await TextAnalysisService.analyzeHealthReport(text);
 
-      // Update the analysis result directly on this screen
-      setState(() {
-        _analysisResult = predictedIssues.trim();
-      });
+      // Navigate to the ReportResultPage and pass the analysis result
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => ReportResultPage(analysisResult: predictedIssues.trim()),
+        ),
+      );
     } catch (e) {
       // Handle errors during analysis
       setState(() {
