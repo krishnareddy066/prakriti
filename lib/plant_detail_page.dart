@@ -34,7 +34,7 @@ class _PlantDetailPageState extends State<PlantDetailPage> {
     'Spanish': 'es',
     'French': 'fr',
     'Hindi': 'hi',
-    'Tamil': 'ta',
+    'Tamil': 'ta',  
     'Kannada': 'kn',
     'Telugu':'te',
   };
@@ -338,20 +338,8 @@ class _PlantDetailPageState extends State<PlantDetailPage> {
               _buildSection('Latin Name',
                   plantData!['latinName'] ?? 'No Latin name available'),
               const SizedBox(height: 16.0),
-              _buildSectionWithImage(
-                  'Leaves', leafInfo, images.isNotEmpty ? images[0] : null),
               const SizedBox(height: 16.0),
-              _buildSectionWithImage(
-                  'Roots', rootInfo, images.length > 1 ? images[1] : null),
-              const SizedBox(height: 16.0),
-              _buildSectionWithImage(
-                  'Stem', stemInfo, images.length > 2 ? images[2] : null),
-              const SizedBox(height: 16.0),
-              _buildTextSection('Advantages', advantages),
-              const SizedBox(height: 16.0),
-              _buildTextSection('Disadvantages', disadvantages),
-              const SizedBox(height: 16.0),
-              _buildTextSection('Medicinal Uses', medicinalUses),
+              _buildTextSection('How to Grow / Cultivate', growCultivate),
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
                 child: Text(
@@ -454,10 +442,9 @@ class _PlantDetailPageState extends State<PlantDetailPage> {
                     );
                   },
                 ),
-
-              const SizedBox(height: 16.0),
-              _buildTextSection('How to Grow / Cultivate', growCultivate),
-              const SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
+              _buildTextSection('Medicinal Uses', medicinalUses),
+                const SizedBox(height: 16.0),
               if (medicinalVideos.isNotEmpty)
                 _buildVideosSection(medicinalVideos),
               const SizedBox(height: 16.0),
@@ -488,6 +475,23 @@ class _PlantDetailPageState extends State<PlantDetailPage> {
                   ),
                 ),
               ),
+              _buildSectionWithImage(
+                  'Leaves', leafInfo, images.isNotEmpty ? images[0] : null),
+              const SizedBox(height: 16.0),
+              _buildSectionWithImage(
+                  'Roots', rootInfo, images.length > 1 ? images[1] : null),
+              const SizedBox(height: 16.0),
+              _buildSectionWithImage(
+                  'Stem', stemInfo, images.length > 2 ? images[2] : null),
+              const SizedBox(height: 16.0),
+              _buildTextSection('Advantages', advantages),
+              const SizedBox(height: 16.0),
+              _buildTextSection('Disadvantages', disadvantages),
+              
+              
+
+              
+              
             ],
           ),
         ),
